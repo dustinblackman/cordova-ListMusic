@@ -65,6 +65,6 @@ module.exports = function(callback) {
         rootObj[artist][album] = sortedObj;
       }
     }
-    return console.log(rootObj);
+    return callback(rootObj);
   }, callback, "ListMusic", "listmusic", []);
 };
