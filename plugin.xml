@@ -2,7 +2,7 @@
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="com.dustinblackman.plugin.ListMusic"
-    version="0.0.1">
+    version="0.0.2">
 
   <name>ListMusic</name>
   <author>Dustin Blackman</author>
@@ -27,6 +27,11 @@
         <param name="android-package" value="com.dustinblackman.plugin.ListMusic" />
       </feature>
     </config-file>
+    <config-file target="AndroidManifest.xml" parent="/*">
+        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    </config-file>
+
 
     <source-file src="src/android/com/dustinblackman/plugin/ListMusic.java"
       target-dir="src/com/dustinblackman/plugin" />
